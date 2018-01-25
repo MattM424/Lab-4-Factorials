@@ -10,11 +10,15 @@ namespace Lab4Factoral
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter a number");
-            int n = int.Parse(Console.ReadLine());
-            Console.WriteLine(GetFactorial(n));
-
-
+            while (true)
+            {
+                Console.WriteLine("Please enter a number");
+                int n = int.Parse(Console.ReadLine());
+                Console.WriteLine(GetFactorial(n));
+                Console.WriteLine("Would you like me to continue? (Yes/No)");
+                if (Console.ReadLine().ToLower() != "yes")
+                    break;
+            }
         }
 
         public static long GetFactorial(int n)
